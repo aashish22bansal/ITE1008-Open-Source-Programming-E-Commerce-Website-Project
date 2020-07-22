@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Shopping Cart</title>
+        <link rel="icon" type ="image" href ="images/cart.png">
+        <link rel="stylesheet"type = "text/css"href ="style.css">
+    </head>
+    <body>
+        <header id="heading">
+                <image id="logo" src ="images/l.png" height ="65" width "140" />
+                <h1>DBMS<span id="color_me"> PROJECT</span></h1>
+                
+            </header>
+            <h1>-------ENTER THE EMAIL ID AND PASSWORD TO ENTER THE SHOPPING WEBSITE------<h1>
+        <div id="frm">
+            <form action="process.php" method="POST">
+                <p>
+                    <label><h3>Email ID:</h3></label>
+                    <input type="text" id ="user" name="user" />
+                </p>
+            <p>
+                <label><h3>Password:</h3></label>
+                <input type="password" id="pass"  name="pass" />
+            </p>
+            <p>
+                <input type="submit" id="btn" value="Login"/>
+            </p>
+            </form>
+        </div>
+    </body>
+</html>
