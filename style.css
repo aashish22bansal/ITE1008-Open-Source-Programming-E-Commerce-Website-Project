@@ -6,7 +6,7 @@
 
 body
 {
-	backgroud: #eee;
+	background: #eee;
 }
 #frm{
 	text-align:center;
@@ -17,8 +17,8 @@ body
 	margin-bottom:20px;
 	margin: 200% auto;
 	background : white ;
-	padding:50%
-	margin-top:200px;
+	padding:50%;
+	margin-top: 200px;
 
 	
 }
@@ -78,9 +78,9 @@ h1{
 }
 #btn{
 	color:  black;
-	background: #3337ab7;
-	padding : 5p%;
-	margin-left:69p%;
+	background: #3337ab;
+	padding: 5px;
+	margin-left: 69px;
 	width:100px;
 	height:30px;
 }
