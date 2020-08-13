@@ -1,0 +1,65 @@
+CREATE TABLE Customer(
+    CustomerID CHAR(10) PRIMARY KEY,
+    FirstName CHAR(30),
+    LastName CHAR(30),
+    Contact NUMBER(10)
+);
+
+CREATE TABLE PersonalInfo(
+    CustomerID CHAR(10) PRIMARY KEY,
+    Email CHAR(50),
+    Phone NUMBER(10),
+    Address CHAR(300),
+    City CHAR(20),
+    PostalCode NUMBER(6),
+    Country CHAR(20)
+);
+
+CREATE TABLE BillingInfo(
+    BillingID CHAR(10) PRIMARY KEY,
+    BillDate TIMESTAMP,
+    BillingAddress CHAR(400),
+    CreditCardID NUMBER(16),
+    CreditCardPIN NUMBER(3),
+    CreditCardExpDate CHAR(7),
+    CreditCardNo NUMBER
+);
+
+CREATE TABLE Order_(
+    OrderID CHAR(10) PRIMARY KEY,
+    CustomerID CHAR(10),
+    ProductID CHAR(10),
+    OrderDate TIMESTAMP,
+    UnitPrice NUMBER(6,2),
+    RequiredDate TIMESTAMP,
+    Quantity NUMBER,
+    OrderNumber CHAR(10),
+    Discount NUMBER(3,2),
+    Amount NUMBER(6,2)
+);
+
+
+CREATE TABLE Cart(
+    CartID CHAR(10) PRIMARY KEY,
+    NumberOfProducts NUMBER,
+    TotalPrice NUMBER(6,2)
+);
+
+CREATE TABLE Product(
+    ProductID CHAR(10) PRIMARY KEY,
+    ProductName CHAR(100),
+    ProductDescription CHAR(1000),
+    UnitPrice NUMBER(6,2),
+    Category_ CHAR(20),
+    Picture IMAGE,
+    Discount NUMBER(3,2),
+    UnitsOnOrder NUMBER,
+    UnitsInStock NUMBER
+);
+
+CREATE TABLE Admin_(
+    AdminID CHAR(10) PRIMARY KEY,
+    AdminFname CHAR(30),
+    AdminLname CHAR(30),
+    AdminPassword CHAR(50)
+);
