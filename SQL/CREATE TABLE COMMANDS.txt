@@ -1,62 +1,67 @@
+-- BELOW DATABASE CREATED
 CREATE TABLE Customer(
     CustomerID CHAR(10) PRIMARY KEY,
     FirstName CHAR(30),
     LastName CHAR(30),
-    Contact NUMBER(10)
+    Contact INT
 );
 
+--BELOW DATABASE CREATED
 CREATE TABLE PersonalInfo(
     CustomerID CHAR(10) PRIMARY KEY,
     Email CHAR(50),
-    Phone NUMBER(10),
-    Address CHAR(300),
+    Phone INT,
+    Address CHAR(255),
     City CHAR(20),
-    PostalCode NUMBER(6),
+    PostalCode INT,
     Country CHAR(20)
 );
 
+-- BELOW DATABASE CREATED
 CREATE TABLE BillingInfo(
     BillingID CHAR(10) PRIMARY KEY,
     BillDate TIMESTAMP,
-    BillingAddress CHAR(400),
-    CreditCardID NUMBER(16),
-    CreditCardPIN NUMBER(3),
+    BillingAddress CHAR(255),
+    CreditCardID INT,
+    CreditCardPIN INT,
     CreditCardExpDate CHAR(7),
-    CreditCardNo NUMBER
+    CreditCardNo INT
 );
 
+-- BELOW DATABASE CREATED
 CREATE TABLE Order_(
     OrderID CHAR(10) PRIMARY KEY,
     CustomerID CHAR(10),
     ProductID CHAR(10),
     OrderDate TIMESTAMP,
-    UnitPrice NUMBER(6,2),
+    UnitPrice FLOAT(6,2),
     RequiredDate TIMESTAMP,
-    Quantity NUMBER,
+    Quantity INT,
     OrderNumber CHAR(10),
-    Discount NUMBER(3,2),
-    Amount NUMBER(6,2)
+    Discount FLOAT(3,2),
+    Amount FLOAT(6,2)
 );
 
-
+-- BELOW DATABASE CREATED
 CREATE TABLE Cart(
     CartID CHAR(10) PRIMARY KEY,
-    NumberOfProducts NUMBER,
-    TotalPrice NUMBER(6,2)
+    NumberOfProducts INT,
+    TotalPrice FLOAT(6,2)
 );
 
+-- BELOW DATABASE CREATED BUT WITHOUT IMAGE
 CREATE TABLE Product(
     ProductID CHAR(10) PRIMARY KEY,
     ProductName CHAR(100),
-    ProductDescription CHAR(1000),
-    UnitPrice NUMBER(6,2),
+    ProductDescription CHAR(255),
+    UnitPrice FLOAT(6,2),
     Category_ CHAR(20),
-    Picture IMAGE,
-    Discount NUMBER(3,2),
-    UnitsOnOrder NUMBER,
-    UnitsInStock NUMBER
+    Discount FLOAT(3,2),
+    UnitsOnOrder INT,
+    UnitsInStock INT
 );
 
+-- BELOW DATABASE CREATED
 CREATE TABLE Admin_(
     AdminID CHAR(10) PRIMARY KEY,
     AdminFname CHAR(30),
