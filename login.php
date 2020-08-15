@@ -4,28 +4,57 @@
         <link rel="stylesheet" type="text/css" href="login.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-        <?php
-            $servername = "localhost";
-            $username = "username";
-            $password = "password";
-            /*define($servername, "127.0.0.1");
-
-            define("DB_SERVER", "localhost");
-            define("DB_USER", "root");
-            define("DB_PASSWORD", "");
-            define("DB_DATABASE", "databasename");
-
-            $connect = mysqli_connect(DB_SERVER , DB_USER, DB_PASSWORD, DB_DATABASE);
-            */
-            // Create connection
-            $conn = new mysqli($servername, $username, $password);
-            // Check connection
-            if ($conn->connect_error) {
-                die("Connection failed: " . $conn->connect_error);            }
-            echo "Connected successfully";
-        ?>
     </head>
     <body>
+    <?php
+            session_start();// STARTING THE SESSION
+            echo("Hi");
+            $connection = new mysqli('localhost','root',''); // NEED TO ENTER YOUR OWN DETAILS
+            // CHECKING IF IT IS CONNECTED
+            if($connection)
+            {
+                echo("Connection Successful!");
+            }
+            else{
+                echo("NOT CONEECTED");
+            }
+
+            //CONNECTING TO A DATABASE NOW
+            mysqli_select_db($connection,'admin_');
+            $name = $_POST['username'];
+            $pass = $_POST['psw'];
+
+            // QUERY TO INSERT DATA
+            $q = "select * from admin_ where AdminID = '$name' && AdminPassword = '$pass'";
+
+            // VERIFYING THE QUERY
+            $result = mysqli_query($connection,$q);
+
+            $num = mysqli_num_rows($result);
+            if($num==true)
+            {
+                echo("Duplicate Data");
+            }
+            else
+            {
+                $qy = "insert into admin_(AdminID,AdminPassword) values($name,$pass)";
+                mysqli_query($connection,$qy);
+            }
+            /*$servername = "localhost";
+            $username = "username";
+            $password = "password";
+
+            // Create connection
+            $conn = new mysqli($servername, $username, $password);
+
+            // Check connection
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            }
+            echo "Connected successfully";
+            */
+        ?>
+
         <center>
             <form action="PHP/action_page.php" method="post">
                 <div class="imgcontainer">
@@ -34,7 +63,7 @@
              
                 <div class="container">
                     <label for="uname"><b>Username</b></label>
-                    <input type="text" placeholder="Enter Mobile Number" name="mobno">
+                    <input type="text" placeholder="Enter Username" name="username">
                     <br><br>
 
                     <label for="psw"><b>Password</b></label>

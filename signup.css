@@ -29,18 +29,18 @@ button {
   cursor: pointer;
   width: 20%;
   opacity: 0.9;
-  align: center;
+  box-align: center;
 }
 
 button:hover {
   opacity:1;
-  align: center;
+  box-align: center;
 }
 
 .cancelbtn {
   padding: 14px 20px;
   background-color: #f44336;
-  align:center;
+  box-align:center;
 }
 
 .cancelbtn, .signupbtn {
@@ -50,7 +50,7 @@ button:hover {
 
 .container {
   padding: 16px;
-  align: center;
+  box-align: center;
 }
 
 .divbutton::after {
@@ -62,6 +62,6 @@ button:hover {
 @media screen and (max-width: 300px) {
   .cancelbtn, .signupbtn {
     width: 50%;
-    align: center;
+    box-align: center;
   }
 }
