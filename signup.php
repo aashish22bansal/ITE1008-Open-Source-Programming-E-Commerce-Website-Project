@@ -3,7 +3,21 @@
         <title> SIGN-UP</title>
         <link rel="stylesheet" type="text/css" href="signup.css">
         <?php
-            $servername = "localhost";
+            session_start();// STARTING THE SESSION
+            $connection = mysqli('localhost','root','123Aashish456'); // NEED TO ENTER YOUR OWN DETAILS
+            // CHECKING IF IT IS CONNECTED
+            if($connection)
+            {
+                echo("Connection Successful!");
+            }
+            else{
+                echo("NOT CONEECTED");
+            }
+
+            //CONNECTING TO A DATABASE NOW
+            mysqli_select_db($connection,'admin_');
+            $name = $_POST['']
+            /*$servername = "localhost";
             $username = "username";
             $password = "password";
 
@@ -15,6 +29,7 @@
                 die("Connection failed: " . $conn->connect_error);
             }
             echo "Connected successfully";
+            */
         ?>
     </head>
     <body>
