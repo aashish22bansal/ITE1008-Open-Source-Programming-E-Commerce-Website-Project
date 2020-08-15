@@ -9,7 +9,7 @@
         <?php
             session_start();// STARTING THE SESSION
             echo("Hi");
-            $connection = new mysqli('localhost','root',''); // NEED TO ENTER YOUR OWN DETAILS
+            $connection = new mysqli('localhost','root','123Aashish456'); // NEED TO ENTER YOUR OWN DETAILS
             // CHECKING IF IT IS CONNECTED
             if($connection)
             {

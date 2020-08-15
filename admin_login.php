@@ -1,7 +1,7 @@
 <html>
     <head>
-        <title>LOGIN</title>
-        <link rel="stylesheet" type="text/css" href="login.css">
+        <title>ADMIN LOGIN</title>
+        <link rel="stylesheet" type="text/css" href="admin_login.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     </head>
@@ -20,12 +20,12 @@
             }
 
             //CONNECTING TO A DATABASE NOW
-            mysqli_select_db($connection,'customer');
+            mysqli_select_db($connection,'admin_');
             $name = $_POST['username'];
             $pass = $_POST['psw'];
 
             // QUERY TO INSERT DATA
-            $q = "select * from admin_ where CustomerID = '$name' && Password = '$pass'";
+            $q = "select * from admin_ where AdminID = '$name' && AdminPassword = '$pass'";
 
             // VERIFYING THE QUERY
             $result = mysqli_query($connection,$q);
