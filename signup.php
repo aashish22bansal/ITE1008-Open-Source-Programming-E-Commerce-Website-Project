@@ -37,7 +37,7 @@
             }
             else
             {
-                $qy = "insert into admin_(AdminID,AdminPassword) values($name,$pass)";
+                $qy = "insert into admin_(AdminID,AdminPassword) values('$name','$pass')";
                 mysqli_query($connection,$qy);
             }
             /*$servername = "localhost";
@@ -52,7 +52,93 @@
                 die("Connection failed: " . $conn->connect_error);
             }
             echo "Connected successfully";
-            */
+            
+
+
+            //THE BELOW PART IS USED FOR THE VERIFICATION OF THE ENTERED DETAILS OF THE USER
+            
+            
+            
+            
+            
+            if(isset($_POST['signupbtn']))
+            {
+                $username=$_POST['username'];
+                $email=$_POST['email'];
+                $password=$_POST['psw'];
+                $passwordConf=$_POST['psw-repeat'];
+            
+            
+                if(empty($username))
+                {
+                    $errors['username']="Username required";
+                }
+            
+                if(!filter_var($email,FILTER_VALIDATE_EMAIL))
+                {
+                    $errors['email']="Email address is invalid!";
+                }
+            
+            
+            
+                if(empty($email))
+                {
+                    $errors['email']="Email required";
+                }
+                if(empty($password))
+                {
+                    $errors['psw']="Password required";
+                }
+            
+                if($password !== $passwordConf)
+                {
+                     $errors['psw']="The two passwords do not match";
+                }
+            
+                $emailQuery = "select * from users where email=? limit 1";
+                $stmt = $connection->prepare($emailQuery);
+                $stmt->bind_param('s',$email);
+                $stmt->execute();
+                $result=$stmt->get_result();
+                $userCount=$result->num_rows;
+                $stmt->close();
+            
+                if($userCount > 0)
+                {
+                    $errors['email'] = "Email already exists";
+                }
+            
+            
+                if(count($errors)===0)
+                {
+                    $password = password_hash($password, PASSWORD_DEFAULT);
+                    $token = bin2hex(random_bytes(50));
+                    $verified = false;
+                
+                    $sql =  "insert into users(username,email,verified,token,password)values(?,?,?,?,?)";
+                    $stmt = $connection->prepare($sql);
+                    $stmt->bind_param('ssiss',$username,$email,$verified,$token,$password);
+                    if($stmt->execute())
+                    {
+            
+                        $user_id = $conn->insert_id;
+                        $SESSION['id']= $user_id;
+                        $SESSION['username']=$username;
+                        $SESSION['email']=$email;
+                        $SESSION['verified']=$verified;
+                
+                        $_SESSION['message']="You are now logged in!";
+                        $_SESSION['alert-class']="alert-success";
+                        header('location:index.php');
+                        exit();
+             
+                }
+                else
+                {
+                    $errors['db_error'] = "Database error: failed to register";
+                }
+                
+            }*/
         ?>
         <center>
             <form action="action_page.php" >
