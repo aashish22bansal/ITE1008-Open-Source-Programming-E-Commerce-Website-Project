@@ -22,7 +22,7 @@
             //CONNECTING TO A DATABASE NOW
             mysqli_select_db($connection,'customer');
             $name = $_POST['username'];
-            $pass = $_POST['psw'];
+            $pass = $_POST['password'];
 
             // QUERY TO INSERT DATA
             $q = "select * from admin_ where CustomerID = '$name' && Password = '$pass'";
@@ -64,12 +64,12 @@
                 </div>
              
                 <div class="container">
-                    <label for="uname"><b>Username</b></label>
+                    <label><b>Username</b></label>
                     <input type="text" placeholder="Enter Username" name="username">
                     <br><br>
 
-                    <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw">
+                    <label><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="password">
                     <br><br>
 
                     <button type="submit">Login</button><br>
