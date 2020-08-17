@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 
 <?php
-    $username = $_POST['user'];
-    $password = $_POST['pass'];
+    $username = $_POST['username'];
+    $password = $_POST['password'];
     $username = stripcslashes($username);
     $password = stripcslashes($password);
-    $username =mysql_real_escape_string($username);
-    $password =mysql_real_escape_string($password);
-    mysql_connect('localhost' , 'root', "");
+    $username = mysql_real_escape_string($username);
+    $password = mysql_real_escape_string($password);
+    mysql_connect('localhost' , 'root', '123Aashish456');
     mysql_select_db("dbms");
     $result=mysql_query("select * from users where username ='$username 'and password ='$password' ") or die ("failed to query database".mysql_error());
     $row=mysql_fetch_array($result);
