@@ -5,11 +5,18 @@
     </head>
     <body>
         <!HEADER>
-        <div class="header">
+        <div class="header" height="200px">
 			<a href="HOME_PAGE.html" target="_blank" class="active">Home Page</a>
 			<div class="header-left">
                 <a href="Contact.html" target="_blank">Contact</a>
-                <input type="text" placeholder="Search..">
+                <!-- Load icon library -->
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+                <!-- The form -->
+                <form class="example" action="action_page.php">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
             </div>
             <div class="header-right">
                 <a href="login.html" target="_blank">Login/Register</a>
@@ -17,8 +24,17 @@
 			</div>
         </div>
         <!ADVERTISEMENT>
-        <marquee behavior="scroll" width="100%" direction="left" height="100px" scrollamount="10">
-            ADVERTISEMENT
-        </marquee>
+        <div>
+            <div class="row">
+                <div class="column1">
+                    <img src="wecare.jpg" width="200px" height="67px">
+                </div>
+                <div class="column2">
+                    <marquee behavior="scroll" width="100%" direction="left" height="100px" scrollamount="10">
+                        ADVERTISEMENT
+                    </marquee>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
