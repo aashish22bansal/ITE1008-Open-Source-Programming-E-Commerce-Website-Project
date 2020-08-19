@@ -75,7 +75,7 @@
         </script>
         <?php
 
-            //echo "<a href='http://localhost/Open-Source-Programming-E-Commerce-Project/PHP/action_page.php'>CLICK HERE TO ENTER</a>";
+            ////echo "<a href='http://localhost/Open-Source-Programming-E-Commerce-Project/PHP/action_page.php'>CLICK HERE TO ENTER</a>";
             /*
             $num = mysqli_num_rows($result);
 
