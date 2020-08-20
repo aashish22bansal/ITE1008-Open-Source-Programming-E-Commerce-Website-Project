@@ -113,7 +113,7 @@
             <!--MAKING A SLIDER-->
             <div class="container" id="slider">
                 <div class="col-md-12"><!--col-md-12 STARTS-->
-                    <div class="carousel slide" id="myCarousel"><!--carousel slide STARTS-->
+                    <div class="carousel slide" id="myCarousel" data-ride="carousel"><!--carousel slide STARTS-->
                         <ol class="carousel-indicators">
                             <li data-target="myCarousel" data-slide-to="0" class="action"></li>
                             <li data-target="myCarousel" data-slide-to="1"></li>
@@ -121,7 +121,7 @@
                             <li data-target="myCarousel" data-slide-to="3"></li>
                         </ol>
                         <div class="carousel-inner"> <!-- carousel-inner START-->
-                            <div class="item">
+                            <div class="item active">
                                 <img src="admin_area/slider_images/1.jpg">
                             </div>
                             <div class="item">
@@ -134,6 +134,14 @@
                                 <img src="admin_area/slider_images/4.jpg">
                             </div>
                         </div><!-- carousel-inner END-->
+                        <a href="#myCarousel" class="left carousel-control" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a href="#myCarousel" class="right carousel-control" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
                     </div><!--carousel slide ENDS-->
                 </div><!--col-md-12 ENDS-->
             </div><!--ENDING OF THE SLIDER DIVISION-->
