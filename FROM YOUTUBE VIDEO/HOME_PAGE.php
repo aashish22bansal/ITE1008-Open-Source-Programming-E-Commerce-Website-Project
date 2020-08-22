@@ -324,6 +324,22 @@
                 </div>
               </div>
             </div><!--col-sm-4 col-sm-6 single end-->
+            <div class="col-sm-4 col-sm-6 single"><!--col-sm-4 col-sm-6 single start-->
+              <div class="product">
+                <a href="details.php">
+                  <img src="admin_area/product_images/product.jpg" class="img-responsive" />
+                </a>
+                <div class="text">
+                  <h3><a href="details.php">BENETTON White Polo T-Shirt</a></h3>
+                  <p class="price">INR 299
+                  </p>
+                  <p class="buttons">
+                    <a href="details.php" class="btn btn-default">View Details</a>
+                    <a href="details.php" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                  </p>
+                </div>
+              </div>
+            </div><!--col-sm-4 col-sm-6 single end-->
           </div>
         </div>
         <!--footer start-->
