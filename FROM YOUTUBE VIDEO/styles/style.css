@@ -250,7 +250,7 @@ top ul.menu{
   display: inline-block;
   width: 30px;
   height: 30px;
-  border=radius: 15px;
+  border-radius: 15px;
   line-height: 30px;
   font-size: 15px;
   text-align: center;
