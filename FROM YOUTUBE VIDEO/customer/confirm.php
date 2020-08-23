@@ -126,6 +126,43 @@
             include("includes/sidebar.php");
             ?>
         </div><!--col-md-3 End-->
+        <div class="col-md-9">
+            <div class="box">
+                <h1 align="center">Please Confirm your Payment</h1>
+                <form action="Confirm.php" method="post" enctype="multiple/form-data">
+                    <div class="form-group">
+                        <label>Invoice Number</label>
+                        <input type="text" class="form-control" name="invoice_Number" required="">
+                    </div>
+                    <div class="form-group">
+                        <label>Amount</label>
+                        <input type="text" class="form-control" name="amount" required="">
+                    </div>
+                    <div class="form-group">
+                        <label>Select Payment Mode</label>
+                        <select class="form-control" name="Payment Mode">
+                            <option>Bank Transfer</option>
+                            <option>Pay pal</option>
+                            <option>PayuMoney</option>
+                            <option>PayTm</option>
+                        </select>
+                    </div>
+                     <div class="form-group">
+                        <label>Transaction Number</label>
+                        <input type="text" class="form-control" name="trfr_number" required="">
+                    </div>
+                    <div class="form-group">
+                        <label>Payment Date</label>
+                        <input type="date" class="form-control" name="Date" required="">
+                    </div>
+                   <div class="text-center">
+                       <button type="Submit" name="Confirm_Payment" class="btn btn-primary btn-lg">
+                           Confirm Payment
+                       </button>
+                   </div>
+                </form>
+            </div>
+        </div>
 
         </div><!--Container End-->
   </div><!--Content End-->
