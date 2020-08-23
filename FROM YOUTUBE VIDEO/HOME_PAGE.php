@@ -147,43 +147,43 @@
             </div><!--ENDING OF THE SLIDER DIVISION-->
         </div><!--Ending the Header-->
         <div id="advantage"> <!--Advantage start-->
-          <div class="container"><!--container start-->
-            <div class="same-height-row"><!--same-height-row start-->
-              <div class="col-sm-4"><!--col-sm-4 start-->
-                <div class="box same-height"><!--box same-height start-->
-                  <div class="icon">
-                    <i class="fa fa-heart"></i>
-                  </div>
-                  <h3><a href="#">BEST PRICES</a></h3>
-                      <p>
-                        You can check on all other sites about the prices and then compare with us.
-                      </p>
-                </div><!--box same-height end-->
-              </div><!--col-sm-4 end-->
-              <div class="col-sm-4"><!--col-sm-4 start-->
-                <div class="box same-height"><!--box same-height start-->
-                  <div class="icon">
-                    <i class="fa fa-heart"></i>
-                  </div>
-                  <h3><a href="#">100% SATISFACTION GUARANTEED FROM US</a></h3>
-                      <p>
-                        Free returns on everything for 3 months.
-                      </p>
-                </div><!--box same-height end-->
-              </div><!--col-sm-4 end-->
-              <div class="col-sm-4"><!--col-sm-4 start-->
-                <div class="box same-height"><!--box same-height start-->
-                  <div class="icon">
-                    <i class="fa fa-heart"></i>
-                  </div>
-                  <h3><a href="#">WE LOVE OUR CUSTOMERS</a></h3>
-                      <p>
-                        We are known to provide best possible service ever.
-                      </p>
-                </div><!--box same-height end-->
-              </div><!--col-sm-4 end-->
-            </div><!--same-height-row end-->
-          </div><!--container end-->
+            <div class="container"><!--container start-->
+                <div class="same-height-row"><!--same-height-row start-->
+                    <div class="col-sm-4"><!--col-sm-4 start-->
+                        <div class="box same-height"><!--box same-height start-->
+                          <div class="icon">
+                            <i class="fa fa-heart"></i>
+                          </div>
+                          <h3><a href="#">BEST PRICES</a></h3>
+                              <p>
+                                You can check on all other sites about the prices and then compare with us.
+                              </p>
+                        </div><!--box same-height end-->
+                    </div><!--col-sm-4 end-->
+                    <div class="col-sm-4"><!--col-sm-4 start-->
+                      <div class="box same-height"><!--box same-height start-->
+                        <div class="icon">
+                          <i class="fa fa-heart"></i>
+                        </div>
+                        <h3><a href="#">100% SATISFACTION GUARANTEED FROM US</a></h3>
+                            <p>
+                              Free returns on everything for 3 months.
+                            </p>
+                      </div><!--box same-height end-->
+                    </div><!--col-sm-4 end-->
+                    <div class="col-sm-4"><!--col-sm-4 start-->
+                      <div class="box same-height"><!--box same-height start-->
+                        <div class="icon">
+                          <i class="fa fa-heart"></i>
+                        </div>
+                        <h3><a href="#">WE LOVE OUR CUSTOMERS</a></h3>
+                            <p>
+                              We are known to provide best possible service ever.
+                            </p>
+                      </div><!--box same-height end-->
+                    </div><!--col-sm-4 end-->
+                </div><!--same-height-row end-->
+            </div><!--container end-->
         </div><!--Advantage end-->
         <div id="hot"><!--hot start-->
           <div class="box"><!--box start-->

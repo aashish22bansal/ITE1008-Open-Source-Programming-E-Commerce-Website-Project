@@ -252,8 +252,8 @@
                 </ul>
             </center>
         </div><!--col-md-9 End-->
-    </div>
-</div>
+    </div><!--Contained End-->
+</div><!--Content End-->
 <!--footer start-->
 <?php include("includes/footer.php") ?>
           <!--footer end-->
