@@ -127,7 +127,9 @@
             ?>
         </div><!--col-md-3 End-->
         <div class="col-md-9">
+		  <!--Including my_order.php page Start-->
           <?php if(isset($_GET['my_order'])){include("my_order.php");} ?>
+		  <!--Including my_order.php page End-->
         </div>
 
 
