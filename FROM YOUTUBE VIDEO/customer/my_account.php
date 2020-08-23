@@ -134,7 +134,7 @@
 
 
 
-      </div><!--Contained End-->
+      </div><!--Container End-->
   </div><!--Content End-->
   <!--footer start-->
   <?php include("includes/footer.php") ?>
