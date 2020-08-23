@@ -296,6 +296,13 @@ top ul.menu{
 #content .headline{
   height: 350px;
 }
+
+/*Cart Styles*/
+#content #cart .table tbody tr td img{
+  width: 50px;
+}
+
+
 /*footer style*/
 #footer {
   background: #e0e0e0;
