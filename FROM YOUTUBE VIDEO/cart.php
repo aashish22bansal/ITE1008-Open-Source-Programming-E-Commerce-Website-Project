@@ -120,7 +120,7 @@
                             </li>
                         </ul>
                     </div><!--col-md-12 ENDS-->
-                    <div class="col-md-9" id="cart"><!--col-md-12 STARTS-->
+                    <div class="col-md-9" id="cart"><!--col-md-9 STARTS-->
                         <div class="box">
                             <form action="cart.php" method="post" enctype="multipart-form-data">
                                 <h1>Shopping Cart</h1>
@@ -175,12 +175,99 @@
                                         <button class="btn btn-default" type="submit" name="update" value="Update Cart">
                                             <i class="fa fa-refresh"> Update Cart</i>
                                         </button>
+                                        <a href="checkout.php" class="btn btn-primary">Proceed to checkout<i class="fa fa-chevron-right"></i></a>
                                     </div><!-- pull-right ENDS-->
                                 </div><!--box ENDS -->
                             </form>
                         </div><!-- box ENDS-->
-                    </div><!--col-md-12 ENDS-->
-                </div><!--Contained End-->
+                        <div id="row same-height-row"><!--row same-height-row STARTS-->
+                            <div class="col-md-3 col-sm-6"><!--col-md-3 col-sm-6 STARTS-->
+                                <div class="box same-height headline"><!--box same-height headline STARTS-->
+                                    <h3 class="text-center">You Also Like These Products</h3>
+                                </div><!--box same-height headline ENDS-->
+                            </div><!--col-md-3 col-sm-6 ENDS-->
+                            <div class="center-responsive col-md-3"><!--center-responsive col-md-3 STARTS-->
+                                <div class=" product same-height"><!--product same-height STARTS-->
+                                    <a href="">
+                                        <img src="admin_area/product_images/product.jpg" class="img-responsive">
+                                    </a>
+                                    <div class="text"><!--text STARTS-->
+                                        <h3><a href="details.php">Mardaz Pack of 5 - Multicolor Cotton V-Neck T-shirts for Men</a></h3>
+                                        <p class="price">INR 200</p>
+                                    </div><!--text ENDS-->
+                                </div><!--product same-height ENDS-->
+                            </div><!--center-responsive col-md-3 ENDS-->
+                            <div class="center-responsive col-md-3"><!--center-responsive col-md-3 STARTS-->
+                                <div class=" product same-height"><!--product same-height STARTS-->
+                                    <a href="">
+                                        <img src="admin_area/product_images/product.jpg" class="img-responsive">
+                                    </a>
+                                    <div class="text"><!--text STARTS-->
+                                        <h3><a href="details.php">Mardaz Pack of 5 - Multicolor Cotton V-Neck T-shirts for Men</a></h3>
+                                        <p class="price">INR 200</p>
+                                    </div><!--text ENDS-->
+                                </div><!--product same-height ENDS-->
+                            </div><!--center-responsive col-md-3 ENDS-->
+                            <div class="center-responsive col-md-3"><!--center-responsive col-md-3 STARTS-->
+                                <div class=" product same-height"><!--product same-height STARTS-->
+                                    <a href="">
+                                        <img src="admin_area/product_images/product.jpg" class="img-responsive">
+                                    </a>
+                                    <div class="text"><!--text STARTS-->
+                                        <h3><a href="details.php">Mardaz Pack of 5 - Multicolor Cotton V-Neck T-shirts for Men</a></h3>
+                                        <p class="price">INR 200</p>
+                                    </div><!--text ENDS-->
+                                </div><!--product same-height ENDS-->
+                            </div><!--center-responsive col-md-3 ENDS-->
+                        </div><!--row same-height-row ENDS-->
+                    </div><!--col-md-9 ENDS-->
+                    <div class="col-md-3"><!--col-md-3 START-->
+                      <div class="box" id="order-summary">
+                        <div class="box-header">
+                          <h3>Ooder Summary</h3>
+                        </div>
+                        <p class="text-muted">
+                          Shipping and additional costs are calculated based on the values you have entered.
+                        </p>
+                        <div class="table-responsive">
+                          <table class="table">
+                            <tbody>
+                              <tr>
+                                <td>Order Subtotal</td>
+                                <th>
+                                  INR398
+                                </th>
+                              </tr>
+                              <tr>
+                                <td>
+                                  Shipping and Handling
+                                </td>
+                                <td>
+                                  INR 0
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  Tax
+                                </td>
+                                <td>
+                                  INR 0
+                                </td>
+                              </tr>
+                              <tr class="total">
+                                <td>
+                                  Total
+                                </td>
+                                <th>
+                                  INR 399
+                                </th>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div><!--col-md-3 ENDS-->
+                </div><!--Container End-->
             </div><!--Content End-->
         </div><!--navbar navbar-default ENDS-->
         <!--footer start-->

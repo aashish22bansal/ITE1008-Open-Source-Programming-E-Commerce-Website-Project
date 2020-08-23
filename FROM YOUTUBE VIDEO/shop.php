@@ -128,7 +128,7 @@
         <div class="col-md-9"><!--col-md-9 Start-->
             <div class="box">
                     <h1>Shop</h1>
-                    <p>this theme is created by our team</p>
+                    <p>this theme is created by our team-Tech Titans</p>
             </div>
             <div class="row"><!--row start-->
                 <div class="col-md-4 col-sm-6 centre responsive"><!--col-md-4 col-sm-6 centre responsive-->
