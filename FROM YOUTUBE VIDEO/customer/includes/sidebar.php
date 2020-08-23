@@ -14,9 +14,7 @@
       <li class="<?php if(isset($_GET[pay_offline])){echo "active";}?>">
         <a href="my_account.php?pay_offline">Pay Offline<i class="fa fa-bolt"></i></a>
       </li>
-      <li class="<?php if(isset($_GET[my_address])){echo "active";}?>">
-        <a href="my_account.php?my_address">My Address<i class="fa fa-user"></i></a>
-      </li>
+      
       <li class="<?php if(isset($_GET[edit_account])){echo "active";}?>">
         <a href="my_account.php?edit_account">Edit Account<i class="fa fa-pencil"></i></a>
       </li>
