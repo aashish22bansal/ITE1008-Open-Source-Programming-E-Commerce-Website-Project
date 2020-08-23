@@ -130,6 +130,36 @@
 		  <!--Including my_order.php page Start-->
           <?php if(isset($_GET['my_order'])){include("my_order.php");} ?>
 		  <!--Including my_order.php page End-->
+
+          <!--Including Payoffline.php page start-->
+          <?php
+          if(isset($_GET['pay_offline'])){
+          include("pay_offline.php");
+          }
+          ?>
+          <!--Including Payoffline.php page End-->
+          <!--Including Edit_Account.php page start-->
+          <?php
+          if(isset($_GET['edit_account'])){
+            include("edit_account.php");
+          }
+          ?>
+          <!--Including Edit_Account.php page End-->
+          <!--Including Change_password.php page Start-->
+          <?php
+          if(isset($_GET['change_password'])){
+            include("change_password.php");
+          }
+          ?>
+          <!--Including Change_password.php page End-->
+          <!--Including Delete.php page Start-->
+          <?php
+          if(isset($_GET['delete_account'])){
+            include("delete_account.php");
+          }
+          ?>
+          <!--Including Delete.php page End-->
+
         </div>
 
 
