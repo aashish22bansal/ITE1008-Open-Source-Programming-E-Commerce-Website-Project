@@ -8,4 +8,8 @@
       contact us</a>, our customers service center is working for you 24/7.
   </p>
 </center>
+<hr>
+<div class="table-responsive">
+     <table class="table table-bordered table-hover"></table>
+</div>
 </div>
