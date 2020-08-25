@@ -1,5 +1,6 @@
 <?php
-include("includes/db.php");
+  include("includes/db.php");
+  include("functions/functions.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -125,30 +126,30 @@ include("includes/db.php");
                         </ol>
                         <div class="carousel-inner"> <!-- carousel-inner START-->
                             <?php
-                            $get_slider="select * from slider LIMIT 0,1";
-                            $run_slider=mysqli_query($con,$get_slider);
-                            while($row=mysqli_fetch_array($run_slider))
-                            {
-                              $slider_name=$row['slider_name'];
-                              $slider_image=$row['slider_image'];
-                              echo "<div class='item active'>
-                              <img src='admin_area/slider_images/$slider_image'>
-                              </div>
-                              ";
-                            }
+                                $get_slider="select * from slider LIMIT 0,1";
+                                $run_slider=mysqli_query($con,$get_slider);
+                                while($row=mysqli_fetch_array($run_slider))
+                                {
+                                  $slider_name=$row['slider_name'];
+                                  $slider_image=$row['slider_image'];
+                                  echo "<div class='item active'>
+                                  <img src='admin_area/slider_images/$slider_image'>
+                                  </div>
+                                  ";
+                                }
                             ?>
                             <?php
-                            $get_slider="select * from slider LIMIT 1,3";
-                            $run_slider=mysqli_query($con,$get_slider);
-                            while($row=mysqli_fetch_array($run_slider))
-                            {
-                              $slider_name=$row['slider_name'];
-                              $slider_image=$row['slider_image'];
-                              echo "<div class='item'>
-                              <img src='admin_area/slider_images/$slider_image'>
-                              </div>
-                              ";
-                            }
+                                $get_slider="select * from slider LIMIT 1,3";
+                                $run_slider=mysqli_query($con,$get_slider);
+                                while($row=mysqli_fetch_array($run_slider))
+                                {
+                                  $slider_name=$row['slider_name'];
+                                  $slider_image=$row['slider_image'];
+                                  echo "<div class='item'>
+                                  <img src='admin_area/slider_images/$slider_image'>
+                                  </div>
+                                  ";
+                                }
                             ?>
                         </div><!-- carousel-inner END-->
                         <a href="#myCarousel" class="left carousel-control" data-slide="prev">
@@ -168,13 +169,13 @@ include("includes/db.php");
                 <div class="same-height-row"><!--same-height-row start-->
                     <div class="col-sm-4"><!--col-sm-4 start-->
                         <div class="box same-height"><!--box same-height start-->
-                          <div class="icon">
-                            <i class="fa fa-heart"></i>
-                          </div>
-                          <h3><a href="#">BEST PRICES</a></h3>
-                              <p>
-                                You can check on all other sites about the prices and then compare with us.
-                              </p>
+                            <div class="icon">
+                              <i class="fa fa-heart"></i>
+                            </div>
+                            <h3><a href="#">BEST PRICES</a></h3>
+                                <p>
+                                  You can check on all other sites about the prices and then compare with us.
+                                </p>
                         </div><!--box same-height end-->
                     </div><!--col-sm-4 end-->
                     <div class="col-sm-4"><!--col-sm-4 start-->
@@ -213,150 +214,9 @@ include("includes/db.php");
         </div><!--hot end-->
         <div id="content" class="container">
           <div class="row">
-            <div class="col-sm-4 col-sm-6 single"><!--col-sm-4 col-sm-6 single start-->
-              <div class="product">
-                <a href="details.php">
-                  <img src="admin_area/product_images/product.jpg" class="img-responsive" />
-                </a>
-                <div class="text">
-                  <h3><a href="details.php">BENETTON White Polo T-Shirt</a></h3>
-                  <p class="price">INR 299
-                  </p>
-                  <p class="buttons">
-                    <a href="details.php" class="btn btn-default">View Details</a>
-                    <a href="details.php" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                  </p>
-                </div>
-              </div>
-            </div><!--col-sm-4 col-sm-6 single end-->
-            <div class="col-sm-4 col-sm-6 single"><!--col-sm-4 col-sm-6 single start-->
-              <div class="product">
-                <a href="details.php">
-                  <img src="admin_area/product_images/product.jpg" class="img-responsive" />
-                </a>
-                <div class="text">
-                  <h3><a href="details.php">BENETTON White Polo T-Shirt</a></h3>
-                  <p class="price">INR 299
-                  </p>
-                  <p class="buttons">
-                    <a href="details.php" class="btn btn-default">View Details</a>
-                    <a href="details.php" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                  </p>
-                </div>
-              </div>
-            </div><!--col-sm-4 col-sm-6 single end-->
-            <div class="col-sm-4 col-sm-6 single"><!--col-sm-4 col-sm-6 single start-->
-              <div class="product">
-                <a href="details.php">
-                  <img src="admin_area/product_images/product.jpg" class="img-responsive" />
-                </a>
-                <div class="text">
-                  <h3><a href="details.php">BENETTON White Polo T-Shirt</a></h3>
-                  <p class="price">INR 299
-                  </p>
-                  <p class="buttons">
-                    <a href="details.php" class="btn btn-default">View Details</a>
-                    <a href="details.php" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                  </p>
-                </div>
-              </div>
-            </div><!--col-sm-4 col-sm-6 single end-->
-            <div class="col-sm-4 col-sm-6 single"><!--col-sm-4 col-sm-6 single start-->
-              <div class="product">
-                <a href="details.php">
-                  <img src="admin_area/product_images/product.jpg" class="img-responsive" />
-                </a>
-                <div class="text">
-                  <h3><a href="details.php">BENETTON White Polo T-Shirt</a></h3>
-                  <p class="price">INR 299
-                  </p>
-                  <p class="buttons">
-                    <a href="details.php" class="btn btn-default">View Details</a>
-                    <a href="details.php" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                  </p>
-                </div>
-              </div>
-            </div><!--col-sm-4 col-sm-6 single end-->
-            <div class="col-sm-4 col-sm-6 single"><!--col-sm-4 col-sm-6 single start-->
-              <div class="product">
-                <a href="details.php">
-                  <img src="admin_area/product_images/product.jpg" class="img-responsive" />
-                </a>
-                <div class="text">
-                  <h3><a href="details.php">BENETTON White Polo T-Shirt</a></h3>
-                  <p class="price">INR 299
-                  </p>
-                  <p class="buttons">
-                    <a href="details.php" class="btn btn-default">View Details</a>
-                    <a href="details.php" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                  </p>
-                </div>
-              </div>
-            </div><!--col-sm-4 col-sm-6 single end-->
-            <div class="col-sm-4 col-sm-6 single"><!--col-sm-4 col-sm-6 single start-->
-              <div class="product">
-                <a href="details.php">
-                  <img src="admin_area/product_images/product.jpg" class="img-responsive" />
-                </a>
-                <div class="text">
-                  <h3><a href="details.php">BENETTON White Polo T-Shirt</a></h3>
-                  <p class="price">INR 299
-                  </p>
-                  <p class="buttons">
-                    <a href="details.php" class="btn btn-default">View Details</a>
-                    <a href="details.php" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                  </p>
-                </div>
-              </div>
-            </div><!--col-sm-4 col-sm-6 single end-->
-            <div class="col-sm-4 col-sm-6 single"><!--col-sm-4 col-sm-6 single start-->
-              <div class="product">
-                <a href="details.php">
-                  <img src="admin_area/product_images/product.jpg" class="img-responsive" />
-                </a>
-                <div class="text">
-                  <h3><a href="details.php">BENETTON White Polo T-Shirt</a></h3>
-                  <p class="price">INR 299
-                  </p>
-                  <p class="buttons">
-                    <a href="details.php" class="btn btn-default">View Details</a>
-                    <a href="details.php" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                  </p>
-                </div>
-              </div>
-            </div><!--col-sm-4 col-sm-6 single end-->
-            <div class="col-sm-4 col-sm-6 single"><!--col-sm-4 col-sm-6 single start-->
-              <div class="product">
-                <a href="details.php">
-                  <img src="admin_area/product_images/product.jpg" class="img-responsive" />
-                </a>
-                <div class="text">
-                  <h3><a href="details.php">BENETTON White Polo T-Shirt</a></h3>
-                  <p class="price">INR 299
-                  </p>
-                  <p class="buttons">
-                    <a href="details.php" class="btn btn-default">View Details</a>
-                    <a href="details.php" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                  </p>
-                </div>
-              </div>
-            </div><!--col-sm-4 col-sm-6 single end-->
-            <div class="col-sm-4 col-sm-6 single"><!--col-sm-4 col-sm-6 single start-->
-              <div class="product">
-                <a href="details.php">
-                  <img src="admin_area/product_images/product.jpg" class="img-responsive" />
-                </a>
-                <div class="text">
-                  <h3><a href="details.php">BENETTON White Polo T-Shirt</a></h3>
-                  <p class="price">INR 299
-                  </p>
-                  <p class="buttons">
-                    <a href="details.php" class="btn btn-default">View Details</a>
-                    <a href="details.php" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                  </p>
-                </div>
-              </div>
-            </div><!--col-sm-4 col-sm-6 single end-->
+            <?php
+              getPro();
+            ?>
           </div>
         </div>
         <!--footer start-->
