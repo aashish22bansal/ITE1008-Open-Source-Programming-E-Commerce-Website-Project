@@ -77,7 +77,7 @@
                 <h1>$p_cat_title</h1>
                 <p>$p_cat_desc</p>
                 </div>
-               "
+               ";
              }
              while($row_products=mysqli_fetch_array($run_products)){
                $pro_id=$row_products['product_id'];
