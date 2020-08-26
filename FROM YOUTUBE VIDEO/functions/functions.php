@@ -33,7 +33,7 @@
           global $db;
           $get_p_cats="select * from product_categories";
           $run_p_cats=mysqli_query($db,$get_p_cats);
-          while($row_p_cats=msqli_fetch_array($run_p_cats)){
+          while($row_p_cats=mysqli_fetch_array($run_p_cats)){
             $p_cat_id=$row_p_cats['p_cat_id'];
             $p_cat_title=$row_p_cats['p_cat_title'];
             echo "<li><a href='shop.php?p_cat=$p_cat_id'>$p_cat_title</a></li>";
@@ -44,7 +44,7 @@
           global $db;
           $get_cat="select * from categories";
           $run_cat=mysqli_query($db,$get_cat);
-          while($row_cat=msqli_fetch_array($run_cat)){
+          while($row_cat=mysqli_fetch_array($run_cat)){
             $cat_id=$row_cat['cat_id'];
             $cat_title=$row_cat['cat_title'];
             echo"<li><a href='shop.php?cat_id=$cat_id'>$cat_title</a></li>";
