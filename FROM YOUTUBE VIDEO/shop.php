@@ -130,131 +130,81 @@
             ?>
         </div><!--col-md-3 End-->
         <div class="col-md-9"><!--col-md-9 Start-->
-            <div class="box">
-                    <h1>Shop</h1>
-                    <p>this theme is created by our team-Tech Titans</p>
-            </div>
+          <?php
+             if(!isset($_GET['p_cat'])){
+               if(!isset($_GET['cat_id'])){
+                 echo"<div class='box'>
+                 <h1>Shop</h1>
+                 <p>Buy Exciting Products Over Here</p>
+                 </div>";
+               }
+             }
+           ?>
             <div class="row"><!--row start-->
-                <div class="col-md-4 col-sm-6 centre responsive"><!--col-md-4 col-sm-6 centre responsive-->
-                        <div class="product">
-                            <a href="details.php">
-                                <img src="admin_area/product_images/product.jpg" class="img-responsive">
-                            </a>
-                            <div class="text">
-                                <h3>
-                                    <a href="details.php">BENETTON White Polo T-Shirt</a>
-                                </h3>
-                                <p class="price">INR 299</p>
-                                <p class="buttons">
-                                    <a href="details.php" class="btn-btn-default">View details</a>
-                                    <a href="details.php" class="btn-btn-primary"><i class="fa-fa-shopping-cart"></i>Add to cart</a>
-                                </p>
-                            </div>
-                        </div>
+                 <?php
+                     if(!isset($_GET['p_cat'])){
+                       if(!isset($_GET['cat_id'])){
+                         $per_page=6;
+                         if(isset($_GET['page'])){
+                           $page=$_GET['page'];
+                         }
+                         else{
+                           $page=1;
+                         }
+                         $start_from=($page-1) * $per_page;
+                         $get_product="select * from products order by 1 DESC LIMIT $start_from, $per_page";
+                         $run_pro=mysqli_query($con, $get_product);
+                         while($row=mysqli_fetch_array($run_pro)){
+                           $pro_id=$row['product_id'];
+                           $pro_title=$row['product_title'];
+                           $pro_price=$row['product_price'];
+                           $pro_img1=$row['product_img1'];
+                          echo "<div class='col-md-4 col-sm-6 center-responsive'>
+                                    <div class='product'>
+                                    <a href='details.php?pro_id=$pro_id'>
+                                      <img src='admin_area/product_images/$pro_img1' class='img-responsive'/>
+                                    </a>
+                                    <div class='text'>
+                                    <h3><a href='details.php?pro_id=$pro_id'>$pro_title</a></h3>
+                                    <p class='price'>
+                                      INR $pro_price
+                                    </p>
+                                    <p class='buttons'>
+                                    <a href='details.php?pro_id=$pro_id' class='btn btn-default'>View details</a>
+                                    <a href='details.php?pro_id=$pro_id' class='btn btn-primary'><i class='fa fa-shopping-cart'></i>Add to cart</a>
+                                    </p>
+                                    </div>
+                                    </div>
+                            </div>";
+                         }
 
-                </div><!--col-md-4 col-sm-6 centre responsive-->
-                <div class="col-md-4 col-sm-6 centre responsive"><!--col-md-4 col-sm-6 centre responsive-->
-                        <div class="product">
-                            <a href="details.php">
-                                <img src="admin_area/product_images/product.jpg" class="img-responsive">
-                            </a>
-                            <div class="text">
-                                <h3>
-                                    <a href="details.php">BENETTON White Polo T-Shirt</a>
-                                </h3>
-                                <p class="price">INR 299</p>
-                                <p class="buttons">
-                                    <a href="details.php" class="btn-btn-default">View details</a>
-                                    <a href="details.php" class="btn-btn-primary"><i class="fa-fa-shopping-cart"></i>Add to cart</a>
-                                </p>
-                            </div>
-                        </div>
-
-                </div><!--col-md-4 col-sm-6 centre responsive-->
-                <div class="col-md-4 col-sm-6 centre responsive"><!--col-md-4 col-sm-6 centre responsive-->
-                        <div class="product">
-                            <a href="details.php">
-                                <img src="admin_area/product_images/product.jpg" class="img-responsive">
-                            </a>
-                            <div class="text">
-                                <h3>
-                                    <a href="details.php">BENETTON White Polo T-Shirt</a>
-                                </h3>
-                                <p class="price">INR 299</p>
-                                <p class="buttons">
-                                    <a href="details.php" class="btn-btn-default">View details</a>
-                                    <a href="details.php" class="btn-btn-primary"><i class="fa-fa-shopping-cart"></i>Add to cart</a>
-                                </p>
-                            </div>
-                        </div>
-
-                </div><!--col-md-4 col-sm-6 centre responsive-->
-                <div class="col-md-4 col-sm-6 centre responsive"><!--col-md-4 col-sm-6 centre responsive-->
-                        <div class="product">
-                            <a href="details.php">
-                                <img src="admin_area/product_images/product.jpg" class="img-responsive">
-                            </a>
-                            <div class="text">
-                                <h3>
-                                    <a href="details.php">BENETTON White Polo T-Shirt</a>
-                                </h3>
-                                <p class="price">INR 299</p>
-                                <p class="buttons">
-                                    <a href="details.php" class="btn-btn-default">View details</a>
-                                    <a href="details.php" class="btn-btn-primary"><i class="fa-fa-shopping-cart"></i>Add to cart</a>
-                                </p>
-                            </div>
-                        </div>
-
-                </div><!--col-md-4 col-sm-6 centre responsive-->
-                <div class="col-md-4 col-sm-6 centre responsive"><!--col-md-4 col-sm-6 centre responsive-->
-                        <div class="product">
-                            <a href="details.php">
-                                <img src="admin_area/product_images/product.jpg" class="img-responsive">
-                            </a>
-                            <div class="text">
-                                <h3>
-                                    <a href="details.php">BENETTON White Polo T-Shirt</a>
-                                </h3>
-                                <p class="price">INR 299</p>
-                                <p class="buttons">
-                                    <a href="details.php" class="btn-btn-default">View details</a>
-                                    <a href="details.php" class="btn-btn-primary"><i class="fa-fa-shopping-cart"></i>Add to cart</a>
-                                </p>
-                            </div>
-                        </div>
-
-                </div><!--col-md-4 col-sm-6 centre responsive-->
-                <div class="col-md-4 col-sm-6 centre responsive"><!--col-md-4 col-sm-6 centre responsive-->
-                        <div class="product">
-                            <a href="details.php">
-                                <img src="admin_area/product_images/product.jpg" class="img-responsive">
-                            </a>
-                            <div class="text">
-                                <h3>
-                                    <a href="details.php">BENETTON White Polo T-Shirt</a>
-                                </h3>
-                                <p class="price">INR 299</p>
-                                <p class="buttons">
-                                    <a href="details.php" class="btn-btn-default">View details</a>
-                                    <a href="details.php" class="btn-btn-primary"><i class="fa-fa-shopping-cart"></i>Add to cart</a>
-                                </p>
-                            </div>
-                        </div>
-
-                </div><!--col-md-4 col-sm-6 centre responsive-->
+                  ?>
 
             </div> <!--row End-->
             <center>
                 <ul class="pagination">
-                    <li><a href="Shop.php">First Page</a></li>
-                    <li><a href="Shop.php">2</a></li>
-                    <li><a href="Shop.php">3</a></li>
-                    <li><a href="Shop.php">4</a></li>
-                    <li><a href="Shop.php">5</a></li>
-                    <li><a href="Shop.php">Last Page</a></li>
+                    <?php
+                       $query="select * from products";
+                       $result=mysqli_query($con,$query);
+                       $total_record=mysqli_num_rows($result);
+                       $total_pages=ceil($total_record / $per_page);
+                       echo "<li><a href='shop.php?page=1'>".'First Page'."</a></li>";
+                       for($i=1;$i<=$total_pages;$i++){
+                          echo "<li><a href='shop.php?page=".$i."'>".$i." </a></li>";
+                       };
+                       echo "<li><a href='shop.php?page=$total_pages'>".'Last Page'."</a></li>";
+                  }
+                }
+                     ?>
                 </ul>
             </center>
+
+
+              <?php
+                  getPcatPro();
+                  getCatPro();
+               ?>
+
         </div><!--col-md-9 End-->
     </div><!--Contained End-->
 </div><!--Content End-->
