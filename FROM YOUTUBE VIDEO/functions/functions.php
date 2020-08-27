@@ -114,7 +114,7 @@
           if(isset($_GET['cat_id'])){
             $cat_id=$_GET['cat_id'];
             $get_cat="select * from categories where cat_id='$cat_id'";
-            $run_cats=mysqli_quesry($db,$get_cat);
+            $run_cats=mysqli_query($db,$get_cat);
             $row_cat=mysqli_fetch_array($run_cats);
             $cat_title=$row_cat['cat_title'];
             $cat_desc=$row_cat['cat_desc'];
