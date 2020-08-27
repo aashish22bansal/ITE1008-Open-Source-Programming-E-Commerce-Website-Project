@@ -57,7 +57,7 @@
              $p_cat_id=$_GET['p_cat'];
              $get_p_cat="select * from product_categories where p_cat_id='$p_cat_id' ";
              $run_p_cat=mysqli_query($db,$get_p_cat);
-             $rows_p_cat=mysqli_fetch_array($run_p_cat);
+             $row_p_cat=mysqli_fetch_array($run_p_cat);
              $p_cat_title=$row_p_cat['p_cat_title'];
              $p_cat_desc=$row_p_cat['p_cat_desc'];
              $get_products="select * from products where p_cat_id='$p_cat_id' ";
