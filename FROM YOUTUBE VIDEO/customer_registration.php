@@ -22,7 +22,7 @@
                     <a href="#" class="btn btn-success btn-sm">
                         Welcome Guest
                     </a>
-                    <a href="#">Shopping Cart Total Price: INR 100, Total Items: 2</a>
+                    <a href="#">Shopping Cart Total Price: INR <?php totalPrice();?>, Total Items: 2</a>
                 </div><!--col-md-6 offer-->
                 <div class="col-md-6">
                     <ul class="menu">
