@@ -1,5 +1,5 @@
 <?php
-    $db=mysqli_connect("localhost","root","","ecom");
+    $db=mysqli_connect("localhost","root","123Aashish456","ecom");
 
     function getPro(){
         global $db;
