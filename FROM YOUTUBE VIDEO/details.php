@@ -192,7 +192,7 @@ if(isset($_GET['pro_id'])){
                         </div><!--col-sm-6 SLIDER ENDS-->
                         <div class="col-sm-6"><!--col-sm-6 STARTS-->
                             <div class="box"><!--box STARTS-->
-                                <h1 class="text-center"><?php echo $p_title;?></h1>
+                                <h1 class="text-center"><?php echo $p_title; ?></h1>
                                 <?php
                                 addcart();
                                 ?>
