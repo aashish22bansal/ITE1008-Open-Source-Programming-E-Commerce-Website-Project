@@ -168,7 +168,7 @@
                                             <tr>
                                                 <td><img src="admin_area/product_images/<?php echo $p_img1 ?>"></td>
                                                 <td><?php echo $p_title ?></td>
-                                                <td><?php echo $pro_qty ?></td>
+                                                <td><?php echo $p_qty ?></td>
                                                 <td><?php echo $p_price ?></td>
                                                 <td><?php echo $pro_size ?></td>
                                                 <td><input type="checkbox" name="remove[]" value="<?php echo $pro_id ?>"></td>
