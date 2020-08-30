@@ -26,7 +26,7 @@
                     <a href="#" class="btn btn-success btn-sm">
                         Welcome Guest
                     </a>
-                    <a href="#">Shopping Cart Total Price: INR <?php totalPrice();?>, Total Items: <?php item();?></a>
+                    <a href="#">Shopping Cart Total Price: INR 100, Total Items: 2</a>
                 </div><!--col-md-6 offer-->
                 <div class="col-md-6">
                     <ul class="menu">
@@ -92,7 +92,7 @@
                     </div><!--padding-nav ends-->
                     <a href="cart.php" class="btn btn-primary navbar-btn right">
                         <i class="fa fa-shopping-cart"></i>
-                        <span><?php item();?>Items in Cart</span>
+                        <span>Items in Cart</span>
                     </a>
                     <div class="navbar-collapse collapse-right"><!--navbar-collapse collapse-right STARTS-->
                         <button class="btn navbar-btn btn-primary" type="button" data-toggle="collapse" data-target="#search">
@@ -127,16 +127,8 @@
                     <div class="col-md-9" id="cart"><!--col-md-9 STARTS-->
                         <div class="box">
                             <form action="cart.php" method="post" enctype="multipart-form-data">
-
                                 <h1>Shopping Cart</h1>
-                                <?php
-                                $ip_add=getUserIP();
-                                $select_cart="select * from cart where ip_add='$ip_add'";
-                                $run_cart=mysqli_query($con,$select_cart);
-                                $count=mysqli_num_rows($run_cart);
-
-                                ?>
-                                <p class="text-muted">Currently you have <?php echo $count ?> item(s) in your cart</p>
+                                <p class="text-muted">Currently you have 3 item(s) in your cart</p>
                                 <div class="table-responsive">
                                     <table class="table">
                                         <thread>
@@ -150,35 +142,34 @@
                                             </tr>
                                         </thread>
                                         <tbody>
-                                            <?php
-                                            $total=0;
-                                            while ($row=mysqli_fetch_array($run_cart)) {
-                                                $pro_id=$row['p_id'];
-                                                $pro_size=$row['size'];
-                                                $pro_qty=$row['qty'];
-                                                $get_product="select *from products where product_id='$pro_id'";
-                                                $run_pro=mysqli_query($con,$get_product);
-                while ($row=mysqli_fetch_array($run_pro)) {
-                $p_title=$row['product_title'];
-                    $p_img1=$row['product_img1'];
-                    $p_price=$row['product_price'];
-                    $sub_total=$row['product_price']*$pro_qty;
-                    $total += $sub_total; //$total = $total+$sub_total;                         
-                                            ?>
                                             <tr>
-                                                <td><img src="admin_area/product_images/<?php echo $p_img1 ?>"></td>
-                                                <td><?php echo $p_title ?></td>
-                                                <td><?php echo $p_qty ?></td>
-                                                <td><?php echo $p_price ?></td>
-                                                <td><?php echo $pro_size ?></td>
-                                                <td><input type="checkbox" name="remove[]" value="<?php echo $pro_id ?>"></td>
-                                                <td><?php echo $sub_total ?></td>
+                                                <td><img src="admin_area/product_images/product.jpg"></td>
+                                                <td>Mardaz Pack of 5 - Multicolor Cotton V-Neck T-shirts for Men</td>
+                                                <td>2</td>
+                                                <td>INR 200</td>
+                                                <td>Large</td>
+                                                <td><input type="checkbox" name="remove[]"></td>
+                                                <td>INR 400</td>
                                             </tr>
-                                            <?php } } ?>
+                                            <tr>
+                                                <td><img src="admin_area/product_images/product.jpg"></td>
+                                                <td>Mardaz Pack of 5 - Multicolor Cotton V-Neck T-shirts for Men</td>
+                                                <td>2</td>
+                                                <td>INR 200</td>
+                                                <td>Large</td>
+                                                <td><input type="checkbox" name="remove[]"></td>
+                                                <td>INR 400</td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <th colspan="5">Total</th>
+                                                <th colspan="2">INR 400</th>
+                                            </tr>
                                         </tfoot>
                                     </table><!--table ENDS-->
                                 </div><!--table-responsive-->
-                                <div class="box-footer"><!--box STARTS-->
+                                <div class="box"><!--box STARTS-->
                                     <div class="pull-left"><!--pull-left ENDS-->
                                         <a href="index.php" class="btn btn-default">
                                             <i class="fa fa-chevron-left"></i> Continue Shopping
@@ -228,7 +219,7 @@
                                     </a>
                                     <div class="text"><!--text STARTS-->
                                         <h3><a href="details.php">Mardaz Pack of 5 - Multicolor Cotton V-Neck T-shirts for Men</a></h3>
-                                        <p class="price"><?php echo $total ?></p>
+                                        <p class="price">INR 200</p>
                                     </div><!--text ENDS-->
                                 </div><!--product same-height ENDS-->
                             </div><!--center-responsive col-md-3 ENDS-->

@@ -26,7 +26,7 @@
                     <a href="#" class="btn btn-success btn-sm">
                         Welcome Guest
                     </a>
-                    <a href="#">Shopping Cart Total Price: INR <?php totalPrice();?>, Total Items: <?php item();?></a>
+                    <a href="#">Shopping Cart Total Price: INR 100, Total Items: 2</a>
                 </div><!--col-md-6 offer-->
                 <div class="col-md-6">
                     <ul class="menu">
@@ -92,7 +92,7 @@
                     </div><!--padding-nav ends-->
                     <a href="cart.php" class="btn btn-primary navbar-btn right">
                         <i class="fa fa-shopping-cart"></i>
-                        <span><?php item();?>Items in Cart</span>
+                        <span>Items in Cart</span>
                     </a>
                     <div class="navbar-collapse collapse-right"><!--navbar-collapse collapse-right STARTS-->
                         <button class="btn navbar-btn btn-primary" type="button" data-toggle="collapse" data-target="#search">
