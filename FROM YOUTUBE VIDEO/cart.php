@@ -178,7 +178,7 @@
                                         </tfoot>
                                     </table><!--table ENDS-->
                                 </div><!--table-responsive-->
-                                <div class="box"><!--box STARTS-->
+                                <div class="box-footer"><!--box STARTS-->
                                     <div class="pull-left"><!--pull-left ENDS-->
                                         <a href="index.php" class="btn btn-default">
                                             <i class="fa fa-chevron-left"></i> Continue Shopping
