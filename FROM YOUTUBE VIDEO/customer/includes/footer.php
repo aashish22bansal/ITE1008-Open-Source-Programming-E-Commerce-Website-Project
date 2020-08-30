@@ -34,15 +34,11 @@
           <div class="col-md-3 col-sm-6"><!--col-md-3 col-sm-6 start-->
               <h4>Top Product Categories</h4>
               <ul>
-                <?php
-                  $get_p_cats="select * from product_category";
-                  $run_p_cats=mysqli_query($con,$get_p_cats);
-                  while($row_p_cat=mysqli_fetch_array($run_p_cats)){
-                    $p_cat_id=$row_p_cat['p_cat_id'];
-                    $p_cat_title=$row_p_cat['p_cat_title'];
-                    echo "<li><a href='shop.php?p_cat_id=$p_cat_id'>$p_cat_title</a></li>";
-                  }
-                ?>
+                <li>Jacket</li>
+                <li>Accessories</li>
+                <li>Shoes</li>
+                <li>Coats</li>
+                <li>T-shirts</li>
               </ul>
               <hr class="hidden-md hidden-lg" />
           </div><!--col-md-3 col-sm-6 end-->
