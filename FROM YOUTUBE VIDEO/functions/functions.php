@@ -1,7 +1,4 @@
 <?php
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     $db=mysqli_connect("localhost","root","","ecom");
 //for getting user ip start
     function getUserIP(){
@@ -64,14 +61,7 @@
       echo $total;
     }
     //total price end
-=======
-=======
->>>>>>> parent of ba7d4c8... removed my password
-=======
->>>>>>> parent of ba7d4c8... removed my password
     $db=mysqli_connect("localhost","root","123Aashish456","ecom");
-
->>>>>>> parent of ba7d4c8... removed my password
     function getPro(){
         global $db;
         $get_product="select * from products order by 1 DESC LIMIT 0,6";
