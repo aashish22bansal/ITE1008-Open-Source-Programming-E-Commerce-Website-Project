@@ -1,5 +1,6 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
     $db=mysqli_connect("localhost","root","","ecom");
 //for getting user ip start
     function getUserIP(){
@@ -63,6 +64,8 @@
     }
     //total price end
 =======
+=======
+>>>>>>> parent of ba7d4c8... removed my password
     $db=mysqli_connect("localhost","root","123Aashish456","ecom");
 
 >>>>>>> parent of ba7d4c8... removed my password
