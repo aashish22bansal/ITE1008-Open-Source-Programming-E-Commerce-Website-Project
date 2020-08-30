@@ -1,67 +1,6 @@
 <?php
-    $db=mysqli_connect("localhost","root","","ecom");
-//for getting user ip start
-    function getUserIP(){
-      switch(true){
-        case(!empty($_SERVER['HTTP_X_REAL_IP'])):return $_SERVER['HTTP_X_REAL_IP'];
-        case(!empty($_SERVER['HTTP_CLIENT_IP'])):return $_SERVER['HTTP_CLIENT_IP'];
-        case(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])):return $_SERVER['HTTP_X_FORWARDED_FOR'];
-        default: return $_SERVER['REMOTE_ADDR'];
-      }
-    }
-//for getting user ip end
-    
-    function addcart(){
-      global $db;
-      if(isset($_GET['add_cart'])){
-        $ip_add=getUserIP();
-        $p_id=$_GET['add_cart'];
-        $product_qty=$_POST['product_qty'];
-        $product_size=$_POST['product_size'];
-        $check_product="select * from cart where ip_add='$ip_add' AND p_id='$p_id'";
-        $run_check=mysqli_query($db,$check_product);
-        if(mysqli_num_rows($run_check)>0){
-          echo "<script>alert('This product is already added in cart')</script>";
-          echo "<script>window.open('details.php?pro_id=$p_id','_self')</script>";
-        }
-        else{
-          $query="insert into cart (p_id,ip_add,qty,size) values('$p_id','$ip_add','$product_qty','$product_size')";
-          $run_querry=mysqli_query($db,$query);
-          echo "<script>window.open('details.php?pro_id=$p_id','_self')</script>";
-        }
-      }
-    }
-    //item count start
-    function item(){
-      global $db;
-      $ip_add=getUserIP();
-      $get_items="select * from cart where ip_add='$ip_add'";
-      $run_item=mysqli_query($db,$get_items);
-      $count=mysqli_num_rows($run_item);
-      echo $count;
-    }
-    //item count end
-    //total price start
-    function totalPrice(){
-      global $db;
-      $ip_add=getUserIP();
-      $total=0;
-      $select_cat="select * from cart where ip_add='$ip_add'";
-      $run_cart=mysqli_query($db,$select_cat);
-      while($record=mysqli_fetch_array($run_cart)){
-        $pro_id=$record['p_id'];
-        $pro_qty=$record['qty'];
-        $get_price="select * from products where product_id='$pro_id'";
-        $run_price=mysqli_query($db,$get_price);
-        while($row=mysqli_fetch_array($run_price)){
-          $sub_total=$row['product_price']*$pro_qty;
-          $total+=$sub_total;
-        }
-      }
-      echo $total;
-    }
-    //total price end
     $db=mysqli_connect("localhost","root","123Aashish456","ecom");
+
     function getPro(){
         global $db;
         $get_product="select * from products order by 1 DESC LIMIT 0,6";
