@@ -1,5 +1,6 @@
 <?php
     $db=mysqli_connect("localhost","root","","ecom");
+
 //for getting user ip start
     function getUserIP(){
       switch(true){
@@ -10,6 +11,7 @@
       }
     }
 //for getting user ip end
+
     function addcart(){
       global $db;
       if(isset($_GET['add_cart'])){
@@ -60,6 +62,7 @@
       echo $total;
     }
     //total price end
+
     function getPro(){
         global $db;
         $get_product="select * from products order by 1 DESC LIMIT 0,6";
