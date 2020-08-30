@@ -38,7 +38,7 @@
         </div><!--breadcrumb row end-->
         <div class="row"><!--row STARTS-->
             <div class="col-lg-3">
-                
+
             </div>
             <div class="col-lg-6"><!--col-lg-6 STARTS-->
                 <div class="panel panel-default"><!-- panel panel-default STARTS-->
@@ -59,7 +59,7 @@
                                 <select name="product_cat" class="form-control">
                                     <option>Select a product category</option>
                                     <?php
-                                        $get_p_cats="select * from product_category";
+                                        $get_p_cats="select * from product_categories";
                                         $run_p_cats=mysqli_query($con,$get_p_cats);
                                         while($row=mysqli_fetch_array($run_p_cats))
                                         {
