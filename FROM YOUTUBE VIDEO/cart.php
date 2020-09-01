@@ -130,8 +130,7 @@
 
                                 <h1>Shopping Cart</h1>
                                 <?php
-
-                                $ip_add=getUserIP();
+                                $ip_add=getUserIP;
                                 $select_cart="select * from cart where ip_add='$ip_add'";
                                 $run_cart=mysqli_query($con,$select_cart);
                                 $count=mysqli_num_rows($run_cart);
@@ -152,8 +151,9 @@
                                         <tbody>
 
                                             <?php 
+                                            $total=0;
                                             while ($row=mysqli_fetch_array($run_cart)) {
-                                                $pro_id=$row['pro_id'];    
+                                                $pro_id=$row['p_id'];    
                                                 $pro_size=$row['size'];
                                                 $pro_qty=$row['qty'];
                                                 $get_product="select * from products where product_id='$pro_id'";
@@ -272,7 +272,7 @@
                     <div class="col-md-3"><!--col-md-3 START-->
                       <div class="box" id="order-summary">
                         <div class="box-header">
-                          <h3>Ooder Summary</h3>
+                          <h3>Order Summary</h3>
                         </div>
                         <p class="text-muted">
                           Shipping and additional costs are calculated based on the values you have entered.
@@ -283,7 +283,7 @@
                               <tr>
                                 <td>Order Subtotal</td>
                                 <th>
-                                  INR398
+                                  <?php echo $total  ?>
                                 </th>
                               </tr>
                               <tr>
@@ -307,7 +307,7 @@
                                   Total
                                 </td>
                                 <th>
-                                  INR 399
+                                  <?php echo $total  ?>
                                 </th>
                               </tr>
                             </tbody>

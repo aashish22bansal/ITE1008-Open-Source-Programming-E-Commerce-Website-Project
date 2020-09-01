@@ -170,3 +170,34 @@
           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
       </body>
   </html>
+
+<?php
+if(isset($_POST['submit'])){
+$senderName=$_POST['name'];
+$senderEmail=$_POST['e-mail'];
+$senderSubject=$_POST['subject'];
+$senderMessage=$_POST['message'];
+$receiverEmail="dheerajarya860@gmail.com";
+mail($receiverEmail,$senderName,$senderSubject,$senderMessage,$senderEmail);
+//Customer Mail
+$email=$_POST['e-mail'];
+$subject="Welcome to our website";
+$msg="We will be lokking forward to it. Thank you for sending us the mail.";
+$form="dheerajarya860@gmail.com";
+mail($email,$subject,$msg,$form);
+echo "<h2 align='center'>Your mail have been sent</h2>";
+}
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
