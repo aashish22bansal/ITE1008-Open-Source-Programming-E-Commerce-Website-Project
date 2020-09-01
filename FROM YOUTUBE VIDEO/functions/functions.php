@@ -33,7 +33,7 @@
           global $db;
           $get_p_cats="select * from product_categories";
           $run_p_cats=mysqli_query($db,$get_p_cats);
-          while($row_p_cats=mysqli_fetch_array($db,$run_p_cats)){
+          while($row_p_cats=mysqli_fetch_array($run_p_cats)){
             $p_cat_id=$row_p_cats['p_cat_id'];
             $p_cat_title=$row_p_cats['p_cat_title'];
             echo "<li><a href='shop.php?p_cat=$p_cat_id'>$p_cat_title</a></li>";
@@ -49,6 +49,25 @@
             $cat_title=$row_cat['cat_title'];
             echo"<li><a href='shop.php?cat_id=$cat_id'>$cat_title</a></li>";
           }
+        }
+        /*total price starts */
+        function totalPrice(){
+          global $db;
+          $ip_add=getUserIP();
+          $total=0;
+          $select_cat="select * from cart where ip_add='$ip_add'";
+          $run_cart=mysqli_query($db,$select_cat);
+          while ($record=mysqli_fetch_array($run_cart)) {
+            $pro_id=$record['p_id'];
+            $pro_qty=$record['qty'];
+            $get_price="select * from products where product_id='$pro_id'";
+            $run_price=mysqli_query($db,$get_price);
+            while ($row=mysqli_fetch_array($run_price)) {
+              $sub_total=$row['product_price']*$pro_qty;
+              $total += $sub_total;
+            }
+          }
+          echo $total;
         }
         /*GET Product categories product*/
         function getPcatPro(){
