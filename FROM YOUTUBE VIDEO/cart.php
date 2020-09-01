@@ -152,7 +152,7 @@
                                         <tbody>
 
                                             <?php 
-                                            while ($row=mysqli_fetch_array(run_cart)) {
+                                            while ($row=mysqli_fetch_array($run_cart)) {
                                                 $pro_id=$row['pro_id'];    
                                                 $pro_size=$row['size'];
                                                 $pro_qty=$row['qty'];
